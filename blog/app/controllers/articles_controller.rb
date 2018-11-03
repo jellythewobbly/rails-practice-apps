@@ -35,6 +35,16 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def destroy
+    @article = Article.find(params[:id])
+    if @article.destroy
+      flash[:notice] = 'Success, article was deleted'
+    else
+      flash[:notice] = 'ERROR 404, ARTICLE NOT FOUND'
+    end
+    redirect_to articles_path
+  end
+
   private
 
   def article_params
