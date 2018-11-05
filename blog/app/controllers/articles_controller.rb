@@ -1,6 +1,8 @@
 class ArticlesController < ApplicationController
+  before_action :find_article, only: %i[edit update show destory]
+
   def index
-    @articles = Article.all
+    @articles = Article.all.order(:id)
   end
 
   def show
@@ -46,6 +48,10 @@ class ArticlesController < ApplicationController
   end
 
   private
+
+  def find_article
+    @article = Article.find(params[:id])
+  end
 
   def article_params
     params.require(:article).permit(:title, :description)
