@@ -1,6 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :find_article, only: %i[edit update show destory]
-
+  before_action :find_article, only: %i[edit update show destroy]
   def index
     @articles = Article.all.order(:id)
   end
@@ -33,7 +32,7 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    flash[:notice] = if @article.destroy?
+    flash[:notice] = if @article.destroy
                        'Success, article was deleted'
                      else
                        'ERROR 404, ARTICLE NOT FOUND'
