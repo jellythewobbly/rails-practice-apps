@@ -14,3 +14,41 @@
 
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import 'bootstrap';
+
+#nav-logo {
+  float: left;
+  font-size: 1.7em;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: 600;
+}
+
+.jumbotron {
+  background-image: asset-url('rails.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 453px;
+}
+
+.jumbotron-text {
+  color: #000000;
+  font-size: 80px;
+}
+
+.jumbotron-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn-x-lg {
+  font-size: 1.5em;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777777;
+}
