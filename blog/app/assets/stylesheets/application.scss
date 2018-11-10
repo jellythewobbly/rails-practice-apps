@@ -42,6 +42,19 @@
   transform: translateY(-50%);
 }
 
+.btn-red-black {
+  background-color: #dc3545;
+  color: white;
+  border: 5px solid black;
+  border-radius: 0.5rem;
+}
+
+.btn-red-black:hover {
+  background-color: #c82333;
+  color: white;
+  text-decoration: none;
+}
+
 .btn-x-lg {
   font-size: 1.5em;
 }
