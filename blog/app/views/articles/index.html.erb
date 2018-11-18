@@ -1,10 +1,18 @@
-<h1>Here are all the articles</h1>
+<h1 class="text-center">Listing all articles</h1>
 
-<%= link_to 'Create new article', new_article_path %>
-<ul>
-	<% @articles.each do |article| %>
-		<li><%= link_to article.title, article_path(article) %></li>
-	<% end %>
-</ul>
+<% @articles.each do |article| %>
+	<div class="row">
+		<div class="col-md-8 mx-auto">
+			<div class="card card-body bg-light text-center">
+				<div class="article-title">
+					<%= link_to article.title, article_path(article) %>
+				</div>
+				<div class="article-body">
+					<%= truncate(article.description, length: 50) %>
+				</div>
+			</div>
+		</div>
+	</div>
+<% end %>
 
 <%= link_to 'Back to home', root_path %>
